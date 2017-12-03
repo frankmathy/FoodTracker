@@ -1,6 +1,7 @@
 //
 //  Meal.swift
 //  FoodTracker
+//  Class for storing meal data
 //
 //  Created by Frank Mathy on 03.12.17.
 //  Copyright © 2017 Frank Mathy. All rights reserved.
