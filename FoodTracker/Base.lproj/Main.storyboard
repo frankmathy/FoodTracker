@@ -49,6 +49,7 @@
                                     <outlet property="nameLabel" destination="lkc-q7-L0t" id="AtL-zz-l55"/>
                                     <outlet property="photoImageView" destination="Zsj-yH-oRs" id="Hbb-CW-J2e"/>
                                     <outlet property="ratingControl" destination="92J-KR-cP5" id="LMY-gK-DDn"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="F5D-u6-sZt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,7 +68,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nn-1L-H4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-697" y="134"/>
         </scene>
         <!--New Meal-->
         <scene sceneID="tne-QT-ifu">
@@ -163,7 +164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmm-bX-kq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1238" y="134"/>
+            <point key="canvasLocation" x="-1465" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6bw-Df-PNg">
@@ -181,10 +182,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcX-63-Cot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475.19999999999999" y="133.13343328335833"/>
+            <point key="canvasLocation" x="319" y="546"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="F5D-u6-sZt"/>
+    </inferredMetricsTieBreakers>
 </document>
