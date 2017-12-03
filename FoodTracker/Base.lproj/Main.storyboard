@@ -91,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="60" height="60"/>
+        <image name="defaultPhoto" width="540" height="540"/>
     </resources>
 </document>
