@@ -24,6 +24,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         nameTextField.delegate = self
+        updateSaveButtonState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +45,10 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         meal = Meal(name: name, photo: photo, rating: rating)
     }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -51,6 +56,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -72,6 +83,11 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    private func updateSaveButtonState() {
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
     }
 }
 
